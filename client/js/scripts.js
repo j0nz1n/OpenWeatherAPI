@@ -1,5 +1,4 @@
 //var
-const apiKey = "da8bcb03e97b4c7158559ad679f11f7c";
 const apiCountryURL = "https://flagsapi.com//flat/32.png";
 
 const cityInput = document.querySelector("#city-input");
@@ -16,7 +15,7 @@ const windElement = document.querySelector("#wind span");
 const weatherContainer = document.querySelector("#weather-data");
 //funções
 const getWeatherData = async(city) =>{
-    const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
+    const apiWeatherURL = `http://localhost:8080/neymar/${city}`;
     const res = await fetch(apiWeatherURL);
     const data = await res.json();
 
